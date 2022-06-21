@@ -1,0 +1,40 @@
+-- FUNNY COCONUT MALL HEHEHAHHA
+
+local FunnyStuffTM = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+FunnyStuffTM.Name = "FunnyStuffTM"
+FunnyStuffTM.Parent = game.CoreGui
+FunnyStuffTM.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+FunnyStuffTM.IgnoreGuiInset = true
+FunnyStuffTM.ResetOnSpawn = false
+
+ImageLabel.Parent = FunnyStuffTM
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Size = UDim2.new(1, 0, 1, 0)
+ImageLabel.Visible = false
+ImageLabel.Image = "rbxassetid://9953497264"
+
+TextLabel.Parent = ImageLabel
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 0.750
+TextLabel.Size = UDim2.new(1, 0, 0.0714285746, 0)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "YOU JUST GOT COCONUT MALLED. SHARE THIS WITH YOUR FRIENDS TO COCONUT MALL THEM "
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 20.000
+TextLabel.TextWrapped = true
+
+Player = game.Players.LocalPlayer
+Player.Chatted:Connect(function(message)
+	message = message:lower()
+	if message:match("/help") then
+		ImageLabel.Visible = true
+		setfpscap(5)
+	end
+end)
+
