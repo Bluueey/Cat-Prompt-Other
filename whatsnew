@@ -1,0 +1,126 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Changelog = Instance.new("ScreenGui")
+local RGBShadow = Instance.new("ImageLabel")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Window = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local Cat = Instance.new("ImageLabel")
+
+--Properties:
+
+Changelog.Name = "Changelog"
+Changelog.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Changelog.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+RGBShadow.Name = "RGBShadow"
+RGBShadow.Parent = Changelog
+RGBShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+RGBShadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RGBShadow.BackgroundTransparency = 1.000
+RGBShadow.Position = UDim2.new(0.868080437, 0, 0.472303152, 0)
+RGBShadow.Size = UDim2.new(0, 441, 0, 166)
+RGBShadow.Image = "rbxassetid://9964914740"
+
+Frame.Parent = Changelog
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0.450
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.872061551, 0, 0.47228843, 0)
+Frame.Size = UDim2.new(0, 329, 0, 120)
+
+UICorner.Parent = Frame
+
+Window.Name = "Window"
+Window.Parent = Frame
+Window.AnchorPoint = Vector2.new(0.5, 0.5)
+Window.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Window.BackgroundTransparency = 0.650
+Window.BorderSizePixel = 0
+Window.Position = UDim2.new(0.500558555, 0, 0.496964514, 0)
+Window.Size = UDim2.new(0, 314, 0, 103)
+
+TextLabel.Parent = Window
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.175016955, 0, 0.0698736981, 0)
+TextLabel.Size = UDim2.new(0, 211, 0, 34)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "What's New? (v1.032)"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_2.Parent = Window
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.038461674, 0, 0.480653644, 0)
+TextLabel_2.Size = UDim2.new(0, 254, 0, 17)
+TextLabel_2.Font = Enum.Font.Gotham
+TextLabel_2.Text = "- NEW UI! Very meowish!"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_3.Parent = Window
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.038461674, 0, 0.642695427, 0)
+TextLabel_3.Size = UDim2.new(0, 254, 0, 26)
+TextLabel_3.Font = Enum.Font.Gotham
+TextLabel_3.Text = "- Added new games; Raise a floppa, Don't press the button!"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+
+Cat.Name = "Cat"
+Cat.Parent = Window
+Cat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cat.BackgroundTransparency = 1.000
+Cat.Position = UDim2.new(0.0412587933, 0, 0.0715583861, 0)
+Cat.Size = UDim2.new(0, 34, 0, 33)
+Cat.Image = "rbxassetid://9958163671"
+
+-- Scripts:
+
+local function EIQNCD_fake_script() -- RGBShadow.RGB 
+	local script = Instance.new('LocalScript', RGBShadow)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0.0015
+	
+	while wait(0.1)do
+		script.Parent.ImageColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.005
+	end
+end
+coroutine.wrap(EIQNCD_fake_script)()
+local function GLVNHIA_fake_script() -- Frame.RGB 
+	local script = Instance.new('LocalScript', Frame)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0.0015
+	
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.005
+	end
+end
+coroutine.wrap(GLVNHIA_fake_script)()
