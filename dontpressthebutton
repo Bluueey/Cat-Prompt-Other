@@ -1,0 +1,17 @@
+_G.cashgetter = true
+
+while wait() do
+    if _G.cashgetter == true then
+    for _, v in pairs(game.Workspace:GetChildren()) do
+        if v:IsA("Folder") then
+            if v:FindFirstChild("soundplayer") then
+                for _, v in pairs(v:GetChildren()) do
+                    if v:FindFirstChild("Get cash") then
+                        v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                    end
+                end
+            end
+        end
+    end
+    end
+end
