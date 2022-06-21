@@ -12,6 +12,8 @@ local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextLabel_3 = Instance.new("TextLabel")
 local Cat = Instance.new("ImageLabel")
+local Close = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
 
 --Properties:
 
@@ -53,7 +55,7 @@ TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(0.175016955, 0, 0.0698736981, 0)
 TextLabel.Size = UDim2.new(0, 211, 0, 34)
 TextLabel.Font = Enum.Font.GothamBlack
-TextLabel.Text = "What's New? (v1.032)"
+TextLabel.Text = "What's New?"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
@@ -94,9 +96,21 @@ Cat.Position = UDim2.new(0.0412587933, 0, 0.0715583861, 0)
 Cat.Size = UDim2.new(0, 34, 0, 33)
 Cat.Image = "rbxassetid://9958163671"
 
+Close.Name = "Close"
+Close.Parent = Frame
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.Position = UDim2.new(0.880393267, 0, 0.165015489, 0)
+Close.Size = UDim2.new(0, 25, 0, 24)
+Close.Font = Enum.Font.Arial
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 14.000
+
+UICorner_2.Parent = Close
+
 -- Scripts:
 
-local function EIQNCD_fake_script() -- RGBShadow.RGB 
+local function DJMH_fake_script() -- RGBShadow.RGB 
 	local script = Instance.new('LocalScript', RGBShadow)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -109,8 +123,8 @@ local function EIQNCD_fake_script() -- RGBShadow.RGB
 		counter = counter + 0.005
 	end
 end
-coroutine.wrap(EIQNCD_fake_script)()
-local function GLVNHIA_fake_script() -- Frame.RGB 
+coroutine.wrap(DJMH_fake_script)()
+local function PYMOA_fake_script() -- Frame.RGB 
 	local script = Instance.new('LocalScript', Frame)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -123,4 +137,8 @@ local function GLVNHIA_fake_script() -- Frame.RGB
 		counter = counter + 0.005
 	end
 end
-coroutine.wrap(GLVNHIA_fake_script)()
+coroutine.wrap(PYMOA_fake_script)()
+
+Close.MouseButton1Click:Connect(function()
+	Changelog:Destroy()
+end)
